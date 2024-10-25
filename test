@@ -1,1 +1,6 @@
-test
+<title><head>
+	<body>
+	<div class="test1">Parallax</div>
+	<div class="test2">Parallax</div>
+	</body>
+</head></title>
