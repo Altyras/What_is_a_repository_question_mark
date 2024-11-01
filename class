@@ -13,6 +13,8 @@ class Pawn:
         pawn.y=0
     def __str__(pawn):
         return f"{pawn.name},Age:{pawn.ae},PositionX:{pawn.x},PositionY:{pawn.y}"
+    def hello(pawn):
+        print("Hello I'm "+ pawn.name)
 
 Cael = Pawn("Loverdale", 17)
 
@@ -23,3 +25,5 @@ Cael.x=1
 Cael.y=1
 
 print(Cael)
+
+Cael.hello()
