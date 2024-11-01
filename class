@@ -12,10 +12,10 @@ class Pawn:
         pawn.x=0
         pawn.y=0
         pawn.race=race
-    def __str__(pawn):
-        return f"{pawn.name},Age:{pawn.ae},PositionX:{pawn.x},PositionY:{pawn.y}"
-    def hello(pawn,P,I):
-        print(P+ pawn.name, I)
+    def __str__(deb):
+        return f"{deb.name},Age:{deb.ae},PositionX:{deb.x},PositionY:{deb.y}"
+    def hello(deb,P,I):
+        print(P+ deb.name, I)
 
 Cael = Pawn("Loverdale", 17, "Ashoid")
 
