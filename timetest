@@ -18,9 +18,13 @@ print(time.localtime().tm_hour)
 print(time.localtime().tm_sec)
 a=1
 b=1
-for i in range(10000):
+for i in range(3):
     time.sleep(0.618)
     c=b
     b+=a
     a=c
     print(b)
+
+
+for i in range(3):
+    print(input())
