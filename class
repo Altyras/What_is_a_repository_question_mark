@@ -6,17 +6,18 @@ print(p1)
 print(p1.x)
 
 class Pawn:
-    def __init__(pawn,name,age):
+    def __init__(pawn,name,age,race):
         pawn.name = name
         pawn.ae = age
         pawn.x=0
         pawn.y=0
+        pawn.race=race
     def __str__(pawn):
         return f"{pawn.name},Age:{pawn.ae},PositionX:{pawn.x},PositionY:{pawn.y}"
-    def hello(pawn):
-        print("Hello I'm "+ pawn.name)
+    def hello(pawn,P,I):
+        print(P+ pawn.name, I)
 
-Cael = Pawn("Loverdale", 17)
+Cael = Pawn("Loverdale", 17, "Ashoid")
 
 print(Cael.name)
 print(Cael.ae)
@@ -26,4 +27,4 @@ Cael.y=1
 
 print(Cael)
 
-Cael.hello()
+Cael.hello("Hi I'm ","an " + Cael.race)
