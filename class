@@ -1,0 +1,6 @@
+class MyStuff:
+    x=360
+
+p1 = MyStuff()
+print(p1)
+print(p1.x)

@@ -3,5 +3,7 @@ import time
 
 b=[]
 print(b)
-b={1}
+b={}
 print(b)
+
+#pop up window?
