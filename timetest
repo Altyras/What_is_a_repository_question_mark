@@ -16,3 +16,11 @@ print(time.localtime().tm_zone)
 print(time.localtime().tm_isdst)
 print(time.localtime().tm_hour)
 print(time.localtime().tm_sec)
+a=1
+b=1
+for i in range(10000):
+    time.sleep(0.618)
+    c=b
+    b+=a
+    a=c
+    print(b)
