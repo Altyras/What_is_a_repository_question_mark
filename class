@@ -4,3 +4,17 @@ class MyStuff:
 p1 = MyStuff()
 print(p1)
 print(p1.x)
+
+class Pawn:
+    def __init__(pawn,name,age):
+        pawn.name = name
+        pawn.ae = age
+    def __str__(pawn):
+        return f"{pawn.name}({pawn.ae})"
+
+Michael = Pawn("Loverdale", 17, )
+
+print(Michael.name)
+print(Michael.ae)
+
+print(Michael)
