@@ -9,12 +9,17 @@ class Pawn:
     def __init__(pawn,name,age):
         pawn.name = name
         pawn.ae = age
+        pawn.x=0
+        pawn.y=0
     def __str__(pawn):
-        return f"{pawn.name}({pawn.ae})"
+        return f"{pawn.name},Age:{pawn.ae},PositionX:{pawn.x},PositionY:{pawn.y}"
 
-Michael = Pawn("Loverdale", 17, )
+Cael = Pawn("Loverdale", 17)
 
-print(Michael.name)
-print(Michael.ae)
+print(Cael.name)
+print(Cael.ae)
 
-print(Michael)
+Cael.x=1
+Cael.y=1
+
+print(Cael)
