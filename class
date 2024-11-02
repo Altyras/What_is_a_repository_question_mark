@@ -4,10 +4,12 @@ class MyStuff:
 p1 = MyStuff()
 print(p1)
 print(p1.x)
-
+a=None
 class Pawn:
     def __init__(pawn,name,age,race):
+        global a
         pawn.name = name
+        a=pawn.name
         pawn.ae = age
         pawn.x=0
         pawn.y=0
@@ -19,10 +21,20 @@ class Pawn:
     def x_incrementby1(pawn,I):
         pawn.x+=I
     def arebothpawnshere(pawn,deb):
-        if pawn.x == deb.x and pawn.y == pawn.y:
+        if pawn.x == deb.x and pawn.y == deb.y:
             print(f"I am here with {deb.name}")
         else:
             print(f"Nah I'm not with {deb.name}")
+    def areboththesamename(pawn,deb,i=0):
+        if pawn.name != deb.name:
+            if i == 1:
+                print("I",pawn.name,"do not share the same name with "+a)
+            return False
+        else:
+            if i == 1:
+                print("I",pawn.name,"share the same name with "+a)
+            return True
+
 
 
 Cael = Pawn("Loverdale", 17, "Ashoid")
@@ -39,3 +51,9 @@ print(Cael)
 Cael.hello("Hi I'm ","an " + Cael.race)
 
 Cael.arebothpawnshere(Phorho)
+Cael.areboththesamename(Phorho)
+
+if Cael.areboththesamename(Phorho):
+    print("And yes that is true")
+else:
+    print(f"To simply: {Cael.areboththesamename(Phorho,1)}")
