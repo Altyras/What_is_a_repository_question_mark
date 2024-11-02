@@ -16,10 +16,17 @@ class Pawn:
         return f"{deb.name},Age:{deb.ae},PositionX:{deb.x},PositionY:{deb.y}"
     def hello(deb,P,I):
         print(P+ deb.name, I)
-    def x_incrementby1(pawn,x):
-        pawn.x+=1
+    def x_incrementby1(pawn,I):
+        pawn.x+=I
+    def arebothpawnshere(pawn,deb):
+        if pawn.x == deb.x and pawn.y == pawn.y:
+            print(f"I am here with {deb.name}")
+        else:
+            print(f"Nah I'm not with {deb.name}")
+
 
 Cael = Pawn("Loverdale", 17, "Ashoid")
+Phorho=Pawn("Politos", 20, "Ashoid")
 
 print(Cael.name)
 print(Cael.ae)
@@ -27,7 +34,8 @@ print(Cael.ae)
 Cael.x+=1
 Cael.y=1
 Cael.x_incrementby1(1)
-
 print(Cael)
 
 Cael.hello("Hi I'm ","an " + Cael.race)
+
+Cael.arebothpawnshere(Phorho)
