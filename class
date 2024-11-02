@@ -16,14 +16,17 @@ class Pawn:
         return f"{deb.name},Age:{deb.ae},PositionX:{deb.x},PositionY:{deb.y}"
     def hello(deb,P,I):
         print(P+ deb.name, I)
+    def x_incrementby1(pawn,x):
+        pawn.x+=1
 
 Cael = Pawn("Loverdale", 17, "Ashoid")
 
 print(Cael.name)
 print(Cael.ae)
 
-Cael.x=1
+Cael.x+=1
 Cael.y=1
+Cael.x_incrementby1(1)
 
 print(Cael)
 
