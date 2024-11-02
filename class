@@ -28,11 +28,11 @@ class Pawn:
     def areboththesamename(pawn,deb,i=0):
         if pawn.name != deb.name:
             if i == 1:
-                print("I",pawn.name,"do not share the same name with "+a)
+                print("I",pawn.name,"do not share the same name with "+a, end=" ")
             return False
         else:
             if i == 1:
-                print("I",pawn.name,"share the same name with "+a)
+                print("I",pawn.name,"share the same name with "+a, end=" ")
             return True
 
 
@@ -54,6 +54,6 @@ Cael.arebothpawnshere(Phorho)
 Cael.areboththesamename(Phorho)
 
 if Cael.areboththesamename(Phorho):
-    print("And yes that is true")
+    print(f"And yes that is {Cael.areboththesamename(Phorho,1)}")
 else:
-    print(f"To simply: {Cael.areboththesamename(Phorho,1)}")
+    print(f"or to simply: {Cael.areboththesamename(Phorho,1)}")
