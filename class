@@ -15,16 +15,18 @@ class Pawn:
         pawn.y=0
         pawn.race=race
     def __str__(deb):
-        return f"{deb.name},Age:{deb.ae},PositionX:{deb.x},PositionY:{deb.y}"
+        return f"{deb.name},\tAge:{deb.ae},\tPositionX:{deb.x},\tPositionY:{deb.y}"
     def hello(deb,P,I):
         print(P+ deb.name, I)
     def x_incrementby1(pawn,I):
         pawn.x+=I
-    def arebothpawnshere(pawn,deb):
+    def arebothpawnshere(pawn,deb,i=0):
         if pawn.x == deb.x and pawn.y == deb.y:
             print(f"I am here with {deb.name}")
         else:
             print(f"Nah I'm not with {deb.name}")
+        if i == 1:
+            print(f"{pawn}\n{deb}")
     def areboththesamename(pawn,deb,i=0):
         if pawn.name != deb.name:
             if i == 1:
@@ -34,26 +36,60 @@ class Pawn:
             if i == 1:
                 print("I",pawn.name,"share the same name with "+a, end=" ")
             return True
+    def moveto(pawn,deb):
+        if (pawn.x and pawn.y) < (deb.x and deb.y):
+            pawn.x +=1;pawn.y += 1
+            print(1,pawn.x,pawn.y)
+        elif (pawn.x and pawn.y) > (deb.x and deb.y):
+            pawn.x -=1; pawn.y -= 1
+            print(1,pawn.x,pawn.y)
+        elif (pawn.x < deb.x) and (pawn.y > deb.y):
+            pawn.x += 1; pawn.y -=1
+            print(1,pawn.x,pawn.y)
+        elif (pawn.x > deb.x) and (pawn.y < deb.y):
+            pawn.x -= 1; pawn.y +=1
+            print(1,pawn.x,pawn.y)
+        elif pawn.x < deb.x:
+            pawn.x +=1
+            print(1,pawn.x,pawn.y)
+        elif pawn.x > deb.x:
+            pawn.x -=1
+            print(1,pawn.x,pawn.y)
+        elif pawn.y < deb.y:
+            pawn.y +=1
+            print(1,pawn.x,pawn.y)
+        elif pawn.y > deb.y:
+            pawn.y -=1
+            print(1,pawn.x,pawn.y)
+            
 
 
 
 Cael = Pawn("Loverdale", 17, "Ashoid")
-Phorho=Pawn("Politos", 20, "Ashoid")
+Poro=Pawn("Politos", 20, "Ashoid")
 
 print(Cael.name)
 print(Cael.ae)
 
 Cael.x+=1
-Cael.y=1
-Cael.x_incrementby1(1)
+Cael.y=2
+Cael.x_incrementby1(27)
 print(Cael)
 
 Cael.hello("Hi I'm ","an " + Cael.race)
 
-Cael.arebothpawnshere(Phorho)
-Cael.areboththesamename(Phorho)
+Cael.arebothpawnshere(Poro)
+Cael.areboththesamename(Poro)
 
-if Cael.areboththesamename(Phorho):
-    print(f"And yes that is {Cael.areboththesamename(Phorho,1)}")
+if Cael.areboththesamename(Poro):
+    print(f"And yes that is {Cael.areboththesamename(Poro,1)}")
 else:
-    print(f"or to simply: {Cael.areboththesamename(Phorho,1)}")
+    print(f"or to simply: {Cael.areboththesamename(Poro,1)}")
+
+for i in range(210):
+    Cael.moveto(Poro)
+    Poro.moveto(Cael)
+
+Cael.arebothpawnshere(Poro,1)
+
+print(i)
