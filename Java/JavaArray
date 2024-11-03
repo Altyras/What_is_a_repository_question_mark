@@ -4,7 +4,4 @@ public class Javascript{
         for(i=0;i<stuff[0].length;i++){
             for(j=0;j<stuff.length;j++){
                 System.out.print(stuff[i][j])
-            }
-        }
-    }
-}
+}   }   }   }

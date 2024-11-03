@@ -36,31 +36,39 @@ class Pawn:
             if i == 1:
                 print("I",pawn.name,"share the same name with "+a, end=" ")
             return True
-    def moveto(pawn,deb):
+    def moveto(pawn,deb,i=0):
         if (pawn.x and pawn.y) < (deb.x and deb.y):
             pawn.x +=1;pawn.y += 1
-            print(1,pawn.x,pawn.y)
+            if i==1:
+                print(1,pawn.x,pawn.y)
         elif (pawn.x and pawn.y) > (deb.x and deb.y):
             pawn.x -=1; pawn.y -= 1
-            print(2,pawn.x,pawn.y)
+            if i==1:
+                print(2,pawn.x,pawn.y)
         elif (pawn.x < deb.x) and (pawn.y > deb.y):
             pawn.x += 1; pawn.y -=1
-            print(3,pawn.x,pawn.y)
+            if i==1:
+                print(3,pawn.x,pawn.y)
         elif (pawn.x > deb.x) and (pawn.y < deb.y):
             pawn.x -= 1; pawn.y +=1
-            print(4,pawn.x,pawn.y)
+            if i==1:
+                print(4,pawn.x,pawn.y)
         elif pawn.x < deb.x:
             pawn.x +=1
-            print(5,pawn.x,pawn.y)
+            if i==1:
+                print(5,pawn.x,pawn.y)
         elif pawn.x > deb.x:
             pawn.x -=1
-            print(6,pawn.x,pawn.y)
+            if i==1:
+                print(6,pawn.x,pawn.y)
         elif pawn.y < deb.y:
             pawn.y +=1
-            print(7,pawn.x,pawn.y)
+            if i==1:
+                print(7,pawn.x,pawn.y)
         elif pawn.y > deb.y:
             pawn.y -=1
-            print(8,pawn.x,pawn.y)
+            if i==1:
+                print(8,pawn.x,pawn.y)
             
 
 
@@ -88,7 +96,7 @@ else:
 
 for i in range(210):
     Cael.moveto(Poro)
-    Poro.moveto(Cael)
+    Poro.moveto(Cael,1)
 
 Cael.arebothpawnshere(Poro,1)
 
