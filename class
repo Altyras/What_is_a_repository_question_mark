@@ -42,25 +42,25 @@ class Pawn:
             print(1,pawn.x,pawn.y)
         elif (pawn.x and pawn.y) > (deb.x and deb.y):
             pawn.x -=1; pawn.y -= 1
-            print(1,pawn.x,pawn.y)
+            print(2,pawn.x,pawn.y)
         elif (pawn.x < deb.x) and (pawn.y > deb.y):
             pawn.x += 1; pawn.y -=1
-            print(1,pawn.x,pawn.y)
+            print(3,pawn.x,pawn.y)
         elif (pawn.x > deb.x) and (pawn.y < deb.y):
             pawn.x -= 1; pawn.y +=1
-            print(1,pawn.x,pawn.y)
+            print(4,pawn.x,pawn.y)
         elif pawn.x < deb.x:
             pawn.x +=1
-            print(1,pawn.x,pawn.y)
+            print(5,pawn.x,pawn.y)
         elif pawn.x > deb.x:
             pawn.x -=1
-            print(1,pawn.x,pawn.y)
+            print(6,pawn.x,pawn.y)
         elif pawn.y < deb.y:
             pawn.y +=1
-            print(1,pawn.x,pawn.y)
+            print(7,pawn.x,pawn.y)
         elif pawn.y > deb.y:
             pawn.y -=1
-            print(1,pawn.x,pawn.y)
+            print(8,pawn.x,pawn.y)
             
 
 
