@@ -4,4 +4,5 @@ public class JavaArray{
         for(int i=0;i<stuff.length;i++){
             for(int j=0;j<stuff[0].length;j++){
                 System.out.print(stuff[i][j]+" ");
-}   }   }   }
+        }   }   System.out.print("\nthis is java");
+}   }
