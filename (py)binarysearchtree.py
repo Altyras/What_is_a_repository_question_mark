@@ -1,1 +1,11 @@
-print("I\'m still a bit sad about what happened to my tree, I\'m taking a break... or try to code it again rn")
+class Array:
+    def __init__(elf):
+        elf.stuff=[]
+    def append(elf,insertstuff):
+        elf.stuff += [insertstuff]
+    def __str__(elf):
+        return str(elf.stuff)
+Test=Array()
+print(Test)
+Test=[1,2]
+print(Test.stuff)
