@@ -1,1 +1,1 @@
-WELP, I GUESS MY ENTIRE CODE GOT DELETED
+print("I\'m still a bit sad about what happened to my tree, I\'m taking a break... or try to code it again rn")
