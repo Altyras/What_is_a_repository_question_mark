@@ -1,14 +1,12 @@
-class Array:
-    def __init__(elf):
-        elf.stuff=[]
-    def append(elf,insertstuff):
-        elf.stuff += [insertstuff]
-    def __str__(elf):
-        return str(elf.stuff)
-Test=Array()
-print(Test)
-Test.append(1)
-Test.append(2)
-print(Test.stuff)
+from numpy import median
 
-#just remaking the append function, don't mind
+
+Stuff=[]
+Stuff=[1,2,3,4,5,6,7,8,9,10]
+median(Stuff)
+print(median(Stuff))
+print(median(Stuff)%5)
+if (median(Stuff) % 5 == 0.5):
+    print("Hiphip")
+else:
+    print("Horray!")
