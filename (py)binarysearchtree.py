@@ -7,5 +7,8 @@ class Array:
         return str(elf.stuff)
 Test=Array()
 print(Test)
-Test=[1,2]
+Test.append(1)
+Test.append(2)
 print(Test.stuff)
+
+#just remaking the append function, don't mind
